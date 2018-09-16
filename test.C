@@ -1,5 +1,8 @@
 #include <iostream>
-#include "SubSets.H"
+#include <vector>
+
+//#include "simpleSubSetIterator.H"
+#include "fastSubSetIterator.H"
 
 size_t globalSum = 0;
 
@@ -11,7 +14,7 @@ void print(const std::vector<std::reference_wrapper<std::string>>& vec){
 }
 
 int main(){
-    std::vector<std::string> vec = {"Bitset", "can", "be", "used", "to", "iterate", "over", "all", "possible", "subsets", "of", "elements", "in", "container.", "Change", "print", "function", "to", "something", "useful", "such", "as", "finding", "sum", "of", "all", "the", "strings", "in", "the", "subset"};
+    std::vector<std::string> vec = {"Bitset", "can", "be", "used", "to", "iterate", "over", "all", "possible", "subsets", "of", "elements", "in", "container.", "Change", "print", "function", "to", "something", "useful", "such", "as", "finding", "sum", "of", "all", "the"};//, "strings", "in", "the", "subset"};
     SubSets<std::string> b(vec);
     size_t count = 0;
     std::cout<<vec.size() << std::endl;
