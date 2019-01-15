@@ -31,7 +31,7 @@ public:
     };
     void next(){
         uint64_t oldbinary = binTogray(set_);
-        set_ = (set_ + 1) % capacity_;
+        set_ = (set_ + 1) & (capacity_ - 1); // a % b = a & (b-1) if b is power of two
         uint64_t newbinary = binTogray(set_);
         // diff is exactly a power of two.
         uint64_t diff = newbinary ^ oldbinary;
